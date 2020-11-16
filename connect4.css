@@ -1,0 +1,78 @@
+body{
+  background-color: #1a1a1a;
+  color: white;
+}
+h2{
+  text-align: center;
+  font-weight: bolder;
+  margin-left: 10%;
+  width: 80%;
+  font-size: 5vw;
+  color: white;
+  font-family: 'Exo 2', sans-serif;
+  text-shadow: -0.2rem -0.2rem 1rem purple, 0.2rem 0.2rem 1rem purple;
+  border-radius: 5%;
+}
+/* game board table */
+#board{
+  padding: 10px;
+  margin-bottom: 25px;
+  border-top: 3px solid black;
+  border-left: 10px solid black;
+  border-right: 10px solid black;
+  border-bottom: 15px solid black;
+  border-radius: 1%;
+  box-shadow: -0.2rem -0.2rem 1rem purple, 0.2rem 0.2rem 1rem purple;
+  background: linear-gradient(darkgrey, white);
+}
+#board td {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background:linear-gradient(315deg, black, darkslategrey);
+}
+#game{
+  text-align: center;
+  margin-left: 32%;
+}
+/* pieces are div within game table cells: draw as colored circles */
+.piece {
+  /* TODO: make into circles */
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  animation-name: fall-animation;
+	animation-duration: 500ms;
+}
+.p2{
+  background-color: #00b712;
+  background-image: linear-gradient(315deg, #00b712 0%, limegreen 74%);
+}
+.p1{
+  background-color: #a4508b;
+  background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+
+}
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border-radius: 2px;
+  text-align: center;
+  color: white;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+#column-top td:hover {
+  background-color: #7fd82b;
+  background-image: linear-gradient(319deg, lightgrey 0%, black 100%);
+}
+
+@keyframes fall-animation {
+	from {
+		transform: translateY(-500px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}

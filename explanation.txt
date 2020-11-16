@@ -1,0 +1,15 @@
+Connect four explain
+
+First the board is initialized with the makeBoard and makeBoardHtml Functions
+	makeBoard creates and array that represents the board with all values set to null
+	makeHTML creates all the elements on the page. First it creates
+a row with event listeners that is clicked then it creates all the other 
+rows to display the pieces. All elements have an id set to their coordinates
+
+Then everything after that is run through the click handler
+	When a piece is clicked it gets the x coordinate then finds the 
+first y coordinate that is not set to null in the array. Once it has the
+x and y coordinates it uses them as the id to the set the piece in the 
+board. Then after placing the element it checks for a win/tie and sends 
+and alert if either of those are the case. At the end of eacch turn it 
+switches which players turn it is.
